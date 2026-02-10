@@ -1,21 +1,12 @@
-<%die1 = rand(1..6)
-#puts die1 
+<div class="dice-container">
+  <h1>Roll the Dice!</h1>
 
-die2 = rand(1..6)
-#puts die2
+  <div class="dice">
+    <img src="/images/dice/<%= @die1 %>.svg" alt="Die 1" class="die">
+    <img src="/images/dice/<%= @die2 %>.svg" alt="Die 2" class="die">
+  </div>
 
-total = die1 + die2
-#puts "The total is #{total}"
-%>
+  <h2>Total: <%= @total %></h2>
 
-<P>
-  Die:<%=die1%> 
-  Die:<%=die2%> 
-<p>
-
-<p>
-  <img src="/images/dice/<%=die1%>.svg">
-  <img src="/images/dice/<%=die2%>.svg">
-<p>
-
-<a href="/dice">Roll Again!</a>
+  <a href="/dice" class="roll-button">Roll Again!</a>
+</div>
